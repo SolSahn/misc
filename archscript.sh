@@ -3,7 +3,7 @@ cfdisk
 mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkswap /dev/sda2
-swapon /edv/sda2
+swapon /dev/sda2
 clear
 mount /dev/sda1 /mnt
 mkdir /mnt/home
