@@ -8,12 +8,13 @@ clear
 mount /dev/sda1 /mnt
 mkdir /mnt/home
 mount /dev/sda3 /mnt/home
-pacstrap /mnt base base-devel
-genfstab /mnt>> /mnt/etc/fstab
-arch-chroot /mnt /bin/bash
 clear
 sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen
 echo 'LANG=en_US.UTF-8' >> /etc/locale.conf
+clear
+pacstrap /mnt base base-devel
+genfstab /mnt>> /mnt/etc/fstab
+arch-chroot /mnt /bin/bash
 clear
 passwd
 echo "enter arch server name:"
