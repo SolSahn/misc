@@ -18,7 +18,7 @@ read servname
 echo $servname >> /etc/hostname
 systemctl enable dhcpcd
 pacman --noconfirm -S grub os-prober
-grub_install /dev/sda
+grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
 reboot
